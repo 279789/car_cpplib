@@ -4,7 +4,7 @@
 
 Vehicle::Vehicle(std::string n, int a, float r, int s) : name(n), age(a), retail_price(r), sales_price(s) {}
 
-static Vehicle Vehicle::fromUserInput() {
+Vehicle Vehicle::fromUserInput() {
     std::string n;
     int a, s;
     float r ;
@@ -24,7 +24,7 @@ static Vehicle Vehicle::fromUserInput() {
     return Vehicle(n, a, r, 0);
 }
 
-virtual void Vehicle::print() const {
+void Vehicle::print() const {
     std::cout 	<< "Name: " << name << "\n"
                 << "Age: " << age << "\n"
                 << "Retail price: " << retail_price << "\n\n\n";
@@ -42,7 +42,7 @@ void Vehicle::operator++() {			//adding the ++ operator
 
 Bike::Bike(std::string n, int a, float r, int s) : Vehicle(n, a, r, s) {}
 
-static Bike Bike::fromUserInput() {  //static muss evtl weg!
+Bike Bike::fromUserInput() {  //static muss evtl weg!
     std::string n;
     int a, s;
     float r ;
@@ -73,7 +73,7 @@ void Bike::print() const override {
 Car::Car(std::string n, int a, float r, int s) : Vehicle(n, a, r, s) {}
 
 
-static Car Car::fromUserInput() {
+Car Car::fromUserInput() {
     std::string n;
     int a, s;
     float r ;
