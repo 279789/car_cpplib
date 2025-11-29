@@ -15,10 +15,10 @@ protected:			//Durch protected sind diese vars auch für abgeleitete klassen ver
 
 public:
     Vehicle(std::string n, int a, float r, int s);
-    virtual ~Vehicle() = default;
-    static Vehicle fromUserInput();
-    virtual void print() const;
-    void operator++();
+	virtual ~Vehicle() = default;
+	static Vehicle fromUserInput();
+	virtual void print() const;
+	void operator++();
 };
 
 
@@ -28,12 +28,12 @@ private:
 
 public:
 
-    Bike(std::string n, int a, float r, int s);
-    static Bike fromUserInput();
-    void print() const override;
+    	Bike(std::string n, int a, float r, int s);
+	static Bike fromUserInput();
+    	void print() const override;
 };
 
-class Car : public Vehicle {
+class Car : public Vehicle{
 private:
     int number_of_tires = 4;
 
@@ -44,7 +44,7 @@ public:
 
     static Car fromUserInput();
 
-    void print() const override;
+    void print() const override; 
 };
 
 
