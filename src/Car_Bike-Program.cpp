@@ -62,7 +62,7 @@ Bike Bike::fromUserInput() {  //static muss evtl weg!
     return Bike(n, a, r, 0);
 }
 
-void Bike::print() const override {
+void Bike::print() const {
     std::cout 	<< "Name: " << name << "\n"
                 << "Age: " << age << "\n"
                 << "Retail price: " << retail_price << "\n"
@@ -93,7 +93,7 @@ Car Car::fromUserInput() {
     return Car(n, a, r, 0);
 }
 
-void Car::print() const override {
+void Car::print() const {
     std::cout 	<< "Name: " << name << "\n"
                 << "Age: " << age << "\n"
                 << "Retail price: " << retail_price << "\n"
